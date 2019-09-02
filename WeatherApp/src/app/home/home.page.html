@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title  class="Align">
+      TcF Weather Service
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-card class="Align">
+        <ion-button [routerLink]="['/search']">Search for City</ion-button>
+    </ion-card>
+    
+    <ion-card class="Align" *ngFor="let cities of CityNames">
+      <ion-item ion-padding>
+        <ion-label>{{ cities.city }} </ion-label>
+        <ion-button [routerLink]="['/cityweather', cities.city]">View Weather</ion-button>
+      </ion-item>
+    </ion-card>
+</ion-content>
+
